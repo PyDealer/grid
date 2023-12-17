@@ -1,0 +1,74 @@
+.animation_elem {
+    height: 200px;
+    position: absolute;
+    top: 60%;
+    left: -200px;
+    transform: translate(-50%, -50%);
+    animation: drive 1s ease-out forwards;
+  }
+  
+  .animation_elem_right {
+    height: 200px;
+    position: absolute;
+    top: 60%;
+    right: -200px;
+    transform: translate(50%, -50%);
+    animation: driveRight 1s ease-out forwards;
+  }
+
+  .animation_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    height: 40vh;
+    position: relative;
+}
+
+.animation_elem img,
+.animation_elem_right img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.caption {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.5s;
+  }
+
+  @keyframes drive {
+    0% {
+      left: -200px;
+    }
+    80% {
+      left: 50%;
+    }
+    100% {
+      left: 50%;
+    }
+  }
+  
+  @keyframes driveRight {
+    0% {
+      right: -200px;
+    }
+    80% {
+      right: 50%;
+    }
+    100% {
+      right: 50%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
